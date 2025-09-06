@@ -1,5 +1,4 @@
 FROM docker.io/steamcmd/steamcmd:latest
-ENV HOME /home/css
 ENV REPLACE_MOUNT_CONFIG true
 ENV MAX_PLAYERS 32
 ENV GAME_MODE sandbox
