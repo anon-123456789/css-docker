@@ -5,6 +5,9 @@ echo "Installing CSS Server..."
 steamcmd +force_install_dir /server +login anonymous +app_update 232330 -validate +quit
 echo "Done!"
 
+echo "Adding root symlink..."
+ln -sf /root/.steam ${HOME}/.steam
+
 # Assemble arguments
 if [ -n "$PASSWORD" ]
 then
