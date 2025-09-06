@@ -32,6 +32,8 @@ RUN mkdir ${HOME}/.steam \
     && chown -R css:css ${HOME}/.steam \
     && chmod -R 777 ${HOME}
 
+RUN ln -s ${HOME}/.steam /root/.steam
+
 USER css
 
 VOLUME [ "/server" ]
