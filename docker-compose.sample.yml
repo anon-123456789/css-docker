@@ -1,14 +1,10 @@
 services:
-  gmod:
+  css:
     user: 1000:1000
-    image: ghcr.io/anon-123456789/gmod-docker:latest
+    image: ghcr.io/anon-123456789/css-docker:latest
     environment:
-      - REPLACE_MOUNT_CONFIG=true
       - MAX_PLAYERS=6
-      - GAME_MODE=sandbox
-      - MAP=gm_flatgrass
-      - WORKSHOP_COLLECTION=replace_this
-      - LOCATION=us
+      - MAP=cs_office
       - PASSWORD=replace_this
       - LOGIN_TOKEN=replace_this
       - ARGS=""
@@ -17,4 +13,3 @@ services:
       - 27015:27015/udp
     volumes:
       - ./server:/server
-      - ./mount:/mount
