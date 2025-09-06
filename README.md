@@ -23,6 +23,7 @@ The file structure within the container is as follows:
 Provides the following environment variables for configuration:
 | Variable | Default value | Description |
 |:-----:|:-----:|-----:|
+| PORT | 27015 | Server port |
 | MAX_PLAYERS | 32 | Max players to allow |
 | MAP | cs_office | Map to host |
 | PASSWORD | | Server password, same as `sv_password` |

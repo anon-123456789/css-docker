@@ -10,7 +10,6 @@ ENV PASSWORD=
 ENV LOGIN_TOKEN=
 ENV ARGS=
 
-EXPOSE 27015 27015/udp
 WORKDIR /server
 
 # Add normal user to run server under

@@ -3,6 +3,7 @@ services:
     user: 1000:1000
     image: ghcr.io/anon-123456789/css-docker:latest
     environment:
+      - PORT=27015
       - MAX_PLAYERS=6
       - MAP=cs_office
       - PASSWORD=replace_this

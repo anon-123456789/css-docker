@@ -16,7 +16,7 @@ then
     ARGS="+sv_setsteamaccount $LOGIN_TOKEN $ARGS"
 fi
 
-ARGS="-strictportbind -port 27015 -game cstrike -maxplayers ${MAX_PLAYERS} +map ${MAP} +sv_lan 0 ${ARGS}"
+ARGS="-strictportbind -port ${PORT:=27015} -game cstrike -maxplayers ${MAX_PLAYERS} +map ${MAP} +sv_lan 0 ${ARGS}"
 
 # Start the server
 echo "Starting server..."
