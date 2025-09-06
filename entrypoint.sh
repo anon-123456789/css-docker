@@ -5,16 +5,6 @@ echo "Installing CSS Server..."
 steamcmd +force_install_dir /server +login anonymous +app_update 232330 -validate +quit
 echo "Done!"
 
-echo "Adding root symlink..."
-ln -sf /root/.steam/ /home/css/.steam/
-
-# Replace mount.cfg
-if [ "$REPLACE_MOUNT_CONFIG" = "true" ]; then
-    echo "Replacing GMod mount.cfg..."
-    cp /mount.cfg /server/garrysmod/cfg/mount.cfg
-    echo "Done!"
-fi
-
 # Assemble arguments
 if [ -n "$PASSWORD" ]
 then

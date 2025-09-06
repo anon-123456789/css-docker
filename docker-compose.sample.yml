@@ -1,7 +1,7 @@
 services:
-  css:
-    user: 1000:1000
-    image: ghcr.io/anon-123456789/css-docker:latest
+  gmod:
+    user: 0:0
+    image: ghcr.io/anon-123456789/gmod-docker:latest
     environment:
       - PORT=27015
       - MAX_PLAYERS=6

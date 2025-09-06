@@ -1,6 +1,8 @@
 # css-docker
 
 ### Forked from https://github.com/anon-123456789/gmod-docker, which was forked from https://github.com/randomman552/GMod-Docker for my own use.
+> [!IMPORTANT]
+> This server runs as root by default because I use Docker in rootless mode. If you are using the default rootful mode, this may pose a security risk to your system.
 
 Counter-Strike: Source dedicated server in a Docker container.\
 Includes auto updates on restart
