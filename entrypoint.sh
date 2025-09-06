@@ -6,7 +6,7 @@ steamcmd +force_install_dir /server +login anonymous +app_update 232330 -validat
 echo "Done!"
 
 echo "Adding root symlink..."
-ln -sf /root/.steam ${HOME}/.steam
+ln -sf /root/.steam /home/css/.steam
 
 # Assemble arguments
 if [ -n "$PASSWORD" ]
