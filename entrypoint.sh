@@ -23,6 +23,10 @@ fi
 
 ARGS="-strictportbind -port ${PORT:=27015} -game cstrike -maxplayers ${MAX_PLAYERS} +map ${MAP} +sv_lan 0 ${ARGS}"
 
+# Docker sends us a SIGTERM when the container stops, so trap it to actually shutdown the server cleanly
+echo "Trapping SIGTERM..."
+trap "stop" SIGTERM
+
 # Start the server
 echo "Starting server..."
 /server/srcds_run $ARGS &
