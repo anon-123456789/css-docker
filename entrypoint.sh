@@ -1,5 +1,10 @@
 #!/bin/bash
 
+stop() {
+    echo "SIGTERM requested, Sending SIGINT to PID $SRCDS_RUN_PID..."
+    kill -2 $SRCDS_RUN_PID
+}
+
 # Install/update CSS
 echo "Installing CSS Server..."
 steamcmd +force_install_dir /server +login anonymous +app_update 232330 -validate +quit
@@ -20,5 +25,7 @@ ARGS="-strictportbind -port ${PORT:=27015} -game cstrike -maxplayers ${MAX_PLAYE
 
 # Start the server
 echo "Starting server..."
-/server/srcds_run $ARGS
+/server/srcds_run $ARGS &
+SRCDS_RUN_PID=$!
+wait $SRCDS_RUN_PID
 echo "Finished!"
